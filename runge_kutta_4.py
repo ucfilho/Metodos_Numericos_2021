@@ -1,3 +1,5 @@
+import numpy as np
+
 def rk4( f, t0, tf,x0, h =0.001): 
 
     n = int((tf -t0)/h + 1) 
