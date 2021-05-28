@@ -23,7 +23,7 @@ def rk4( f, t0, tf,x0, h =0.001):
         xnew =[x[i,j]+ k3[j] for j in range(nx)]
         k4 = np.multiply(h ,f(xnew, t[i+1] ))
 
-    for j in range(nx):
-        x[i+1,j] = x[i,j] + ( k1[j] + 2.0 * ( k2[j]  + k3[j]  ) + k4[j]  ) / 6.0
+        for j in range(nx):
+            x[i+1,j] = x[i,j] + ( k1[j] + 2.0 * ( k2[j]  + k3[j]  ) + k4[j]  ) / 6.0
 
     return t,x
