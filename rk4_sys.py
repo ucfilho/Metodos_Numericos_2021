@@ -4,17 +4,14 @@ def rk4( f, t0, tf,x0, h =0.001):
     n = int((tf -t0)/h + 1)
     nx = len(x0)
     x = np.array( [ x0 ] * n )
+    
     t = np.linspace( t0, tf, n )
-    if(nx > 1):
-        k1 = np.zeros(nx, dtype = float) 
-        k2 = np.zeros(nx, dtype = float) 
-        k3 = np.zeros(nx, dtype = float) 
-        k4 = np.zeros(nx, dtype = float) 
-        xnew = np.zeros(nx, dtype = float)
-    else:
-        k1=[[0]];k2=[[0]];k3=[[0]];k4=[[0]];xnew = [[0]]
-    print(xnew)
-    print(k1)
+
+    k1 = np.zeros(nx, dtype = float) 
+    k2 = np.zeros(nx, dtype = float) 
+    k3 = np.zeros(nx, dtype = float) 
+    k4 = np.zeros(nx, dtype = float) 
+    xnew = np.zeros(nx, dtype = float)
 
     for i in range( n - 1 ):
         xnew =[x[i,j] for j in range(nx)]
