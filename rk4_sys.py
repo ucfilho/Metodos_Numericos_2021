@@ -10,7 +10,9 @@ def rk4( f, t0, tf,x0, h =0.001):
     k2 = np.zeros(nx, dtype = float) 
     k3 = np.zeros(nx, dtype = float) 
     k4 = np.zeros(nx, dtype = float) 
-    xnew = np.zeros(nx, dtype = float) 
+    xnew = np.zeros(nx, dtype = float)
+    print(xnew)
+    print(k1)
 
     for i in range( n - 1 ):
         xnew =[x[i,j] for j in range(nx)]
